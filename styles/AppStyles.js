@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
 
   // ===== HERO STYLES =====
   hero: {
-    height: 880,
+    height: 700,
     position: 'relative',
   },
   heroImage: {
