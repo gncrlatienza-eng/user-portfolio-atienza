@@ -7,7 +7,7 @@ export default function App() {
     <ScrollView style={styles.container}>
       <View style={styles.hero}>
         <Image
-          source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769064583/3eaf6ba0-19b5-4e82-9389-029690627062_cefi1p.jpg' }}
+          source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769067439/profile-1_av4yxf.jpg' }}
           style={styles.heroImage}
         />
         <View style={styles.heroOverlay}>
