@@ -1,30 +1,16 @@
-import { useState } from 'react';
 import { Image, Linking, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import DarkModeToggle from './components/DarkModeToggle';
 import { styles } from './styles/AppStyles';
-import { getThemedStyles } from './styles/theme';
 
 export default function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-  const themedStyles = getThemedStyles(isDarkMode);
-
   return (
-    <ScrollView style={[styles.container, themedStyles.container]}>
+    <ScrollView style={styles.container}>
       <View style={styles.hero}>
         <Image
-          source={{ uri: 'https://imgur.com/xOY5XW8' }}
+          source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769067439/profile-1_av4yxf.jpg' }}
           style={styles.heroImage}
         />
         <View style={styles.heroOverlay}>
-          {/* Header with badge and dark mode toggle */}
-          <View style={styles.headerRow}>
-            <Text style={styles.badge}>My Portfolio</Text>
-            <DarkModeToggle
-              isDarkMode={isDarkMode}
-              onToggle={() => setIsDarkMode(!isDarkMode)}
-            />
-          </View>
-
+          <Text style={styles.badge}>My Portfolio</Text>
           <View style={styles.heroInfo}>
             <Text style={styles.name}>Gian Carlo Atienza</Text>
             <Text style={styles.info}>Age: 21</Text>
@@ -83,8 +69,8 @@ export default function App() {
           style={styles.contact}
           onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
         >
-          <Text style={styles.contactIcon}>✉️</Text>
-          <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
+        <Text style={styles.contactIcon}>✉️</Text>
+        <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
