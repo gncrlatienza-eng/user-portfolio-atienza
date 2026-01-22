@@ -1,4 +1,4 @@
-// styles/AppStyles.js
+// styles/AppStyles.ts
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -26,6 +26,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 20,
     paddingTop: 60,
+  },
+  headerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
   },
   badge: {
     backgroundColor: 'rgba(50,50,50,0.9)',
