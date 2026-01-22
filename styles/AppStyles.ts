@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   // Main container
   container: {
     flex: 1,
-    backgroundColor: '#f0f4f8',
+    backgroundColor: '#000000',
   },
 
   // ===== HERO STYLES =====
@@ -32,13 +32,13 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.3)',
     color: 'white',
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '600',
     paddingHorizontal: 24,
     paddingVertical: 14,
     borderRadius: 25,
-    alignSelf: 'center',
     overflow: 'hidden',
+    alignSelf: 'center'
   },
   heroInfo: {
     backgroundColor: 'rgba(255,255,255,0.1)',
@@ -68,11 +68,12 @@ export const styles = StyleSheet.create({
   section: {
     marginHorizontal: 16,
     marginBottom: 24,
+    marginTop: 24,
   },
   sectionCard: {
-    backgroundColor: 'rgba(255,255,255,0.7)',
+    backgroundColor: 'rgba(255,255,255,0.15)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.8)',
+    borderColor: 'rgba(255,255,255,0.8',
     padding: 24,
     borderRadius: 20,
     shadowColor: '#000',
@@ -91,17 +92,17 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: '700',
-    color: '#1a1a1a',
+    color: 'white',
     letterSpacing: -0.5,
   },
   seeAll: {
     fontSize: 16,
-    color: '#007AFF',
+    color: 'white',
     fontWeight: '600',
   },
   text: {
     fontSize: 17,
-    color: '#4a4a4a',
+    color: 'white',
     lineHeight: 26,
     fontWeight: '400',
   },
@@ -115,9 +116,9 @@ export const styles = StyleSheet.create({
   },
   skill: {
     width: '48%',
-    backgroundColor: 'rgba(255,255,255,0.4)',
+    backgroundColor: 'rgba(255,255,255,0.1)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.6)',
+    borderColor: 'rgba(255,255,255,0.1)',
     padding: 16,
     borderRadius: 14,
     shadowColor: '#000',
@@ -129,7 +130,7 @@ export const styles = StyleSheet.create({
   },
   skillText: {
     fontSize: 15,
-    color: '#1a1a1a',
+    color: 'white',
     fontWeight: '600',
     textAlign: 'center',
   },
@@ -141,11 +142,11 @@ export const styles = StyleSheet.create({
   project: {
     width: 300,
     marginRight: 16,
-    backgroundColor: 'rgba(255,255,255,0.8)',
+    backgroundColor: 'rgba(255,255,255,0.1)',
     borderRadius: 20,
     overflow: 'hidden',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.9)',
+    borderColor: 'rgba(255,255,255,0.1)',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
@@ -161,13 +162,13 @@ export const styles = StyleSheet.create({
   projectTitle: {
     fontSize: 20,
     fontWeight: '700',
-    color: '#1a1a1a',
+    color: 'white',
     marginBottom: 6,
     letterSpacing: -0.3,
   },
   projectText: {
     fontSize: 15,
-    color: '#6a6a6a',
+    color: 'white',
     lineHeight: 22,
   },
 
@@ -178,9 +179,9 @@ export const styles = StyleSheet.create({
   contact: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(255,255,255,0.4)',
+    backgroundColor: 'rgba(255,255,255,0)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.6)',
+    borderColor: 'rgba(255,255,255,0.1)',
     padding: 18,
     borderRadius: 16,
     shadowColor: '#000',
@@ -195,7 +196,7 @@ export const styles = StyleSheet.create({
   },
   contactText: {
     fontSize: 16,
-    color: '#1a1a1a',
+    color: 'white',
     fontWeight: '600',
   },
 

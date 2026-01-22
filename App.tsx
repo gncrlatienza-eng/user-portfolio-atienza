@@ -22,7 +22,7 @@ export default function App() {
         <View style={styles.heroOverlay}>
           <Text style={styles.badge}>My Portfolio</Text>
           <View style={styles.heroInfo}>
-            <Text style={styles.name}>Gian Carlo Atienza Atienza</Text>
+            <Text style={styles.name}>Gian Carlo Atienza</Text>
             <Text style={styles.info}>Age, 21</Text>
             <Text style={styles.info}>494, Pag-asa St. Tiaong Quezon</Text>
           </View>
@@ -33,7 +33,7 @@ export default function App() {
       <View style={styles.section}>
         <View style={styles.sectionCard}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.title}>About Me</Text>
+            <Text style={styles.title}>About Me </Text>
           </View>
           <Text style={styles.text}>
             I am a Computer Science Student at De La Salle Lipa, passionate about mobile development. 
