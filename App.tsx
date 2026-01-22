@@ -2,86 +2,142 @@ import { Image, Linking, ScrollView, Text, TouchableOpacity, View } from 'react-
 import { styles } from './styles/AppStyles';
 
 export default function App() {
+  const skills = [
+    'React Native',
+    'Expo',
+    'JavaScript',
+    'UI/UX Design',
+    'Firebase',
+    'TypeScript',
+  ];
+
   return (
     <ScrollView style={styles.container}>
+      {/* ========== HERO SECTION ========== */}
       <View style={styles.hero}>
-        <Image
+        <Image 
           source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769067439/profile-1_av4yxf.jpg' }}
           style={styles.heroImage}
         />
         <View style={styles.heroOverlay}>
           <Text style={styles.badge}>My Portfolio</Text>
           <View style={styles.heroInfo}>
-            <Text style={styles.name}>Gian Carlo Atienza</Text>
-            <Text style={styles.info}>Age: 21</Text>
-            <Text style={styles.info}>494, Pag-asa St. Tiaong Quezon, PH</Text>
+            <Text style={styles.name}>Gian Carlo Atienza Atienza</Text>
+            <Text style={styles.info}>Age, 21</Text>
+            <Text style={styles.info}>494, Pag-asa St. Tiaong Quezon</Text>
           </View>
         </View>
       </View>
 
       {/* ========== ABOUT SECTION ========== */}
       <View style={styles.section}>
-        <Text style={styles.title}>About Me</Text>
-        <Text style={styles.text}>
-          I am a student a Computer Science Student in De La Salle Lipa, ready to learn new things and open for challenges.
-        </Text>
-      </View>
-
-      {/* ========== SKILLS SECTION ========== */}
-      <View style={styles.section}>
-        <Text style={styles.title}>Skills</Text>
-
-        {['React Native', 'Expo', 'JavaScript', 'UI/UX Design', 'Phyton', 'C++', 'Vite-React'].map((skill, i) => (
-          <View key={i} style={styles.skill}>
-            <Text style={styles.skillText}>{skill}</Text>
+        <View style={styles.sectionCard}>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.title}>About Me</Text>
           </View>
-        ))}
+          <Text style={styles.text}>
+            I am a Computer Science Student at De La Salle Lipa, passionate about mobile development. 
+            Ready to learn new things and open for challenges that push my boundaries.
+          </Text>
+        </View>
       </View>
 
-      {/* ========== PROJECTS SECTION ========== */}
+      {/* ========== SKILLS SECTION (2-Column Grid, No Icons) ========== */}
       <View style={styles.section}>
-        <Text style={styles.title}>Projects</Text>
-
-        <View style={styles.project}>
-          <Image
-            source={{ uri: '' }}
-            style={styles.projectImage}
-          />
-          <Text style={styles.projectTitle}>Cine-Ease</Text>
-          <Text style={styles.projectText}>Cinema Booking System</Text>
+        <View style={styles.sectionCard}>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.title}>Skills</Text>
+          </View>
+          <View style={styles.skillsGrid}>
+            {skills.map((skill, i) => (
+              <View key={i} style={styles.skill}>
+                <Text style={styles.skillText}>{skill}</Text>
+              </View>
+            ))}
+          </View>
         </View>
+      </View>
 
-        <View style={styles.project}>
-          <Image
-            source={{ uri: '' }}
-            style={styles.projectImage}
-          />
-          <Text style={styles.projectTitle}>Wel-bi</Text>
-          <Text style={styles.projectText}>Tracks Mood and Well-being</Text>
+      {/* ========== PROJECTS SECTION (Horizontal Scroll) ========== */}
+      <View style={styles.section}>
+        <View style={styles.sectionHeader}>
+          <Text style={styles.title}>Projects</Text>
+          <Text style={styles.seeAll}>See All →</Text>
         </View>
+        <ScrollView 
+          horizontal 
+          showsHorizontalScrollIndicator={false}
+          style={styles.projectsScroll}
+        >
+          <View style={styles.project}>
+            <Image 
+              source={{ uri: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80' }}
+              style={styles.projectImage}
+            />
+            <View style={styles.projectContent}>
+              <Text style={styles.projectTitle}>Cine-Ease</Text>
+              <Text style={styles.projectText}>
+                A modern cinema booking system with real-time seat selection and payment integration.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.project}>
+            <Image 
+              source={{ uri: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80' }}
+              style={styles.projectImage}
+            />
+            <View style={styles.projectContent}>
+              <Text style={styles.projectTitle}>Wel-bi</Text>
+              <Text style={styles.projectText}>
+                Track your daily mood and well-being with insightful analytics and personalized recommendations.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.project}>
+            <Image 
+              source={{ uri: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80' }}
+              style={styles.projectImage}
+            />
+            <View style={styles.projectContent}>
+              <Text style={styles.projectTitle}>Portfolio App</Text>
+              <Text style={styles.projectText}>
+                A beautiful iOS-themed portfolio showcasing my work and skills with modern design.
+              </Text>
+            </View>
+          </View>
+        </ScrollView>
       </View>
 
       {/* ========== CONTACT SECTION ========== */}
       <View style={styles.section}>
-        <Text style={styles.title}>Contact</Text>
+        <View style={styles.sectionCard}>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.title}>Get in Touch</Text>
+          </View>
+          <View style={styles.contactGrid}>
+            <TouchableOpacity 
+              style={styles.contact}
+              onPress={() => Linking.openURL('mailto:gncrlatienza@gmail.com')}
+            >
+              <Text style={styles.contactIcon}>✉️</Text>
+              <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
+            </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.contact}
-          onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
-        >
-        <Text style={styles.contactIcon}>✉️</Text>
-        <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.contact}
-          onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
-        >
-          <Text style={styles.contactIcon}>💻</Text>
-          <Text style={styles.contactText}>GitHub Profile</Text>
-        </TouchableOpacity>
+            <TouchableOpacity 
+              style={styles.contact}
+              onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
+            >
+              <Text style={styles.contactIcon}>💻</Text>
+              <Text style={styles.contactText}>GitHub Profile</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
 
+      <View style={styles.spacer} />
+      
     </ScrollView>
   );
 }
