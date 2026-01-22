@@ -6,16 +6,16 @@ export default function App() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.hero}>
-        <Image 
+        <Image
           source={{ uri: 'https://imgur.com/xOY5XW8' }}
           style={styles.heroImage}
         />
         <View style={styles.heroOverlay}>
           <Text style={styles.badge}>My Portfolio</Text>
           <View style={styles.heroInfo}>
-            <Text style={styles.name}>Giovanni Atienza</Text>
-            <Text style={styles.info}>Age: 25</Text>
-            <Text style={styles.info}>Castilla, Bicol Region, PH</Text>
+            <Text style={styles.name}>Gian Carlo Atienza</Text>
+            <Text style={styles.info}>Age: 21</Text>
+            <Text style={styles.info}>494, Pag-asa St. Tiaong Quezon, PH</Text>
           </View>
         </View>
       </View>
@@ -31,8 +31,8 @@ export default function App() {
       {/* ========== SKILLS SECTION ========== */}
       <View style={styles.section}>
         <Text style={styles.title}>Skills</Text>
-        
-        {['React Native', 'Expo', 'JavaScript', 'UI/UX Design', 'Firebase'].map((skill, i) => (
+
+        {['React Native', 'Expo', 'JavaScript', 'UI/UX Design', 'Phyton', 'C++', 'Vite-React'].map((skill, i) => (
           <View key={i} style={styles.skill}>
             <Text style={styles.skillText}>{skill}</Text>
           </View>
@@ -42,9 +42,9 @@ export default function App() {
       {/* ========== PROJECTS SECTION ========== */}
       <View style={styles.section}>
         <Text style={styles.title}>Projects</Text>
-        
+
         <View style={styles.project}>
-          <Image 
+          <Image
             source={{ uri: '' }}
             style={styles.projectImage}
           />
@@ -53,7 +53,7 @@ export default function App() {
         </View>
 
         <View style={styles.project}>
-          <Image 
+          <Image
             source={{ uri: '' }}
             style={styles.projectImage}
           />
@@ -65,11 +65,16 @@ export default function App() {
       {/* ========== CONTACT SECTION ========== */}
       <View style={styles.section}>
         <Text style={styles.title}>Contact</Text>
-        
-          <Text style={styles.contactIcon}>✉️</Text>
-          <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
 
-        <TouchableOpacity 
+        <TouchableOpacity
+          style={styles.contact}
+          onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
+        >
+        <Text style={styles.contactIcon}>✉️</Text>
+        <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
           style={styles.contact}
           onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
         >
@@ -77,7 +82,7 @@ export default function App() {
           <Text style={styles.contactText}>GitHub Profile</Text>
         </TouchableOpacity>
       </View>
-      
+
     </ScrollView>
   );
 }
