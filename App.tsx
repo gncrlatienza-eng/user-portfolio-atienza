@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Image, Linking, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles/AppStyles';
 
 export default function App() {
+  const [isDark, setIsDark] = useState(false);
+
   const skills = [
     'React Native',
     'Vite React',
@@ -16,7 +19,7 @@ export default function App() {
   ];
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={[styles.container, !isDark && styles.containerLight]}>
       {/* ========== HERO SECTION ========== */}
       <View style={styles.hero}>
         <Image
@@ -24,22 +27,32 @@ export default function App() {
           style={styles.heroImage}
         />
         <View style={styles.heroOverlay}>
-          <Text style={styles.badge}>My Portfolio</Text>
+          <View style={styles.badgeRow}>
+            <Text style={styles.badge}>My Portfolio</Text>
+            <TouchableOpacity 
+              style={[styles.toggleSwitch, isDark && styles.toggleSwitchDark]}
+              onPress={() => setIsDark(!isDark)}
+            >
+              <View style={[styles.toggleThumb, isDark && styles.toggleThumbDark]}>
+                <Text style={styles.toggleIcon}>{isDark ? '🌙' : '☀️'}</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
           <View style={styles.heroInfo}>
             <Text style={styles.name}>Gian Carlo Atienza</Text>
             <Text style={styles.info}>Age, 21</Text>
-            <Text style={styles.info}>494, Pag-asa St. Tiaong Quezon</Text>
+            <Text style={styles.info}>Bio: The Moment You Hesitate, It's All Over</Text>
           </View>
         </View>
       </View>
 
       {/* ========== ABOUT SECTION ========== */}
       <View style={styles.section}>
-        <View style={styles.sectionCard}>
+        <View style={[styles.sectionCard, !isDark && styles.sectionCardLight]}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.title}>About Me </Text>
+            <Text style={[styles.title, !isDark && styles.titleLight]}>About Me </Text>
           </View>
-          <Text style={styles.text}>
+          <Text style={[styles.text, !isDark && styles.textLight]}>
             I am a Computer Science Student at De La Salle Lipa, passionate about mobile development.
             Ready to learn new things and open for challenges that push my boundaries.
 
@@ -50,14 +63,14 @@ export default function App() {
 
       {/* ========== SKILLS SECTION (2-Column Grid, No Icons) ========== */}
       <View style={styles.section}>
-        <View style={styles.sectionCard}>
+        <View style={[styles.sectionCard, !isDark && styles.sectionCardLight]}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.title}>Skills</Text>
+            <Text style={[styles.title, !isDark && styles.titleLight]}>Skills</Text>
           </View>
           <View style={styles.skillsGrid}>
             {skills.map((skill, i) => (
-              <View key={i} style={styles.skill}>
-                <Text style={styles.skillText}>{skill}</Text>
+              <View key={i} style={[styles.skill, !isDark && styles.skillLight]}>
+                <Text style={[styles.skillText, !isDark && styles.skillTextLight]}>{skill}</Text>
               </View>
             ))}
           </View>
@@ -67,35 +80,35 @@ export default function App() {
       {/* ========== PROJECTS SECTION (Horizontal Scroll) ========== */}
       <View style={styles.section}>
         <View style={styles.sectionHeader}>
-          <Text style={styles.title}>Projects</Text>
-          <Text style={styles.seeAll}>See All →</Text>
+          <Text style={[styles.title, !isDark && styles.titleLight]}>Projects</Text>
+          <Text style={[styles.seeAll, !isDark && styles.seeAllLight]}>See All →</Text>
         </View>
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
           style={styles.projectsScroll}
         >
-          <View style={styles.project}>
+          <View style={[styles.project, !isDark && styles.projectLight]}>
             <Image
               source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769103536/Screenshot_2025-10-23_085056_zlicse.png' }}
               style={styles.projectImage}
             />
             <View style={styles.projectContent}>
-              <Text style={styles.projectTitle}>Cine-Ease</Text>
-              <Text style={styles.projectText}>
+              <Text style={[styles.projectTitle, !isDark && styles.projectTitleLight]}>Cine-Ease</Text>
+              <Text style={[styles.projectText, !isDark && styles.projectTextLight]}>
                 A modern cinema booking system with real-time seat selection and payment integration.
               </Text>
             </View>
           </View>
 
-          <View style={styles.project}>
+          <View style={[styles.project, !isDark && styles.projectLight]}>
             <Image
               source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769105318/Screenshot_2026-01-23_020813_tg7lu8.png' }}
               style={styles.projectImage}
             />
             <View style={styles.projectContent}>
-              <Text style={styles.projectTitle}>Wel-bi</Text>
-              <Text style={styles.projectText}>
+              <Text style={[styles.projectTitle, !isDark && styles.projectTitleLight]}>Wel-bi</Text>
+              <Text style={[styles.projectText, !isDark && styles.projectTextLight]}>
                 Track your daily mood and well-being with insightful analytics and personalized recommendations.
               </Text>
             </View>
@@ -105,25 +118,25 @@ export default function App() {
 
       {/* ========== CONTACT SECTION ========== */}
       <View style={styles.section}>
-        <View style={styles.sectionCard}>
+        <View style={[styles.sectionCard, !isDark && styles.sectionCardLight]}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.title}>Get in Touch</Text>
+            <Text style={[styles.title, !isDark && styles.titleLight]}>Get in Touch</Text>
           </View>
           <View style={styles.contactGrid}>
             <TouchableOpacity
-              style={styles.contact}
+              style={[styles.contact, !isDark && styles.contactLight]}
               onPress={() => Linking.openURL('mailto:gncrlatienza@gmail.com')}
             >
               <Text style={styles.contactIcon}>✉️</Text>
-              <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
+              <Text style={[styles.contactText, !isDark && styles.contactTextLight]}>gncrlatienza@gmail.com</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={styles.contact}
+              style={[styles.contact, !isDark && styles.contactLight]}
               onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
             >
               <Text style={styles.contactIcon}>💻</Text>
-              <Text style={styles.contactText}>GitHub Profile</Text>
+              <Text style={[styles.contactText, !isDark && styles.contactTextLight]}>GitHub Profile</Text>
             </TouchableOpacity>
           </View>
         </View>

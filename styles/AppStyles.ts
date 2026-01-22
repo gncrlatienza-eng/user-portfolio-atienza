@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
 
   // ===== HERO STYLES =====
   hero: {
-    height: 900,
+    height: 700,
     position: 'relative',
   },
   heroImage: {
@@ -27,18 +27,23 @@ export const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 60,
   },
+  badgeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
   badge: {
     backgroundColor: 'rgba(255,255,255,0.15)',
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.3)',
     color: 'white',
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: '600',
     paddingHorizontal: 24,
     paddingVertical: 14,
     borderRadius: 25,
     overflow: 'hidden',
-    alignSelf: 'center'
   },
   heroInfo: {
     backgroundColor: 'rgba(255,255,255,0.1)',
@@ -64,6 +69,42 @@ export const styles = StyleSheet.create({
     opacity: 0.95,
   },
 
+  // ===== TOGGLE SWITCH STYLES =====
+  toggleSwitch: {
+    width: 50,
+    height: 28,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+    borderRadius: 14,
+    padding: 2,
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.4)',
+  },
+  toggleSwitchDark: {
+    backgroundColor: 'rgba(74,85,104,0.6)',
+    borderColor: 'rgba(255,255,255,0.2)',
+  },
+  toggleThumb: {
+    width: 24,
+    height: 24,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
+  toggleThumbDark: {
+    alignSelf: 'flex-end',
+    backgroundColor: '#1a202c',
+  },
+  toggleIcon: {
+    fontSize: 12,
+  },
+
   // ===== SECTION STYLES =====
   section: {
     marginHorizontal: 16,
@@ -73,7 +114,7 @@ export const styles = StyleSheet.create({
   sectionCard: {
     backgroundColor: 'rgba(255,255,255,0.15)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.8',
+    borderColor: 'rgba(255,255,255,0.8)',
     padding: 24,
     borderRadius: 20,
     shadowColor: '#000',
@@ -81,7 +122,6 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 12,
     overflow: 'hidden',
-    
   },
   sectionHeader: {
     flexDirection: 'row',
@@ -203,5 +243,55 @@ export const styles = StyleSheet.create({
   // Spacing
   spacer: {
     height: 40,
+  },
+
+  // ===== LIGHT MODE STYLES =====
+  containerLight: {
+    backgroundColor: '#ffffff',
+  },
+  sectionCardLight: {
+    backgroundColor: '#ffffff',
+    borderColor: '#e2e8f0',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+  },
+  titleLight: {
+    color: '#1a202c',
+  },
+  textLight: {
+    color: '#2d3748',
+  },
+  skillLight: {
+    backgroundColor: '#f7fafc',
+    borderColor: '#e2e8f0',
+  },
+  skillTextLight: {
+    color: '#2d3748',
+  },
+  seeAllLight: {
+    color: '#3182ce',
+  },
+  projectLight: {
+    backgroundColor: '#ffffff',
+    borderColor: '#e2e8f0',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+  },
+  projectTitleLight: {
+    color: '#1a202c',
+  },
+  projectTextLight: {
+    color: '#4a5568',
+  },
+  contactLight: {
+    backgroundColor: '#f7fafc',
+    borderColor: '#e2e8f0',
+  },
+  contactTextLight: {
+    color: '#2d3748',
   },
 });
