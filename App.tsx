@@ -4,18 +4,22 @@ import { styles } from './styles/AppStyles';
 export default function App() {
   const skills = [
     'React Native',
-    'Expo',
+    'Vite React',
+    'Phython',
+    'C++',
     'JavaScript',
     'UI/UX Design',
-    'Firebase',
     'TypeScript',
+    'Docker',
+    'Git & GitHub',
+    'Figma',
   ];
 
   return (
     <ScrollView style={styles.container}>
       {/* ========== HERO SECTION ========== */}
       <View style={styles.hero}>
-        <Image 
+        <Image
           source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769067439/profile-1_av4yxf.jpg' }}
           style={styles.heroImage}
         />
@@ -36,7 +40,7 @@ export default function App() {
             <Text style={styles.title}>About Me </Text>
           </View>
           <Text style={styles.text}>
-            I am a Computer Science Student at De La Salle Lipa, passionate about mobile development. 
+            I am a Computer Science Student at De La Salle Lipa, passionate about mobile development.
             Ready to learn new things and open for challenges that push my boundaries.
           </Text>
         </View>
@@ -64,13 +68,13 @@ export default function App() {
           <Text style={styles.title}>Projects</Text>
           <Text style={styles.seeAll}>See All →</Text>
         </View>
-        <ScrollView 
-          horizontal 
+        <ScrollView
+          horizontal
           showsHorizontalScrollIndicator={false}
           style={styles.projectsScroll}
         >
           <View style={styles.project}>
-            <Image 
+            <Image
               source={{ uri: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80' }}
               style={styles.projectImage}
             />
@@ -83,7 +87,7 @@ export default function App() {
           </View>
 
           <View style={styles.project}>
-            <Image 
+            <Image
               source={{ uri: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80' }}
               style={styles.projectImage}
             />
@@ -104,7 +108,7 @@ export default function App() {
             <Text style={styles.title}>Get in Touch</Text>
           </View>
           <View style={styles.contactGrid}>
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.contact}
               onPress={() => Linking.openURL('mailto:gncrlatienza@gmail.com')}
             >
@@ -112,7 +116,7 @@ export default function App() {
               <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.contact}
               onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
             >
@@ -124,7 +128,7 @@ export default function App() {
       </View>
 
       <View style={styles.spacer} />
-      
+
     </ScrollView>
   );
 }
