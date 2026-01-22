@@ -55,8 +55,6 @@ export default function App() {
           <Text style={[styles.text, !isDark && styles.textLight]}>
             I am a Computer Science Student at De La Salle Lipa, passionate about mobile development.
             Ready to learn new things and open for challenges that push my boundaries.
-
-            Education
           </Text>
         </View>
       </View>
