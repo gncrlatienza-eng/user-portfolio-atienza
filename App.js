@@ -1,121 +1,83 @@
-import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+import { Image, Linking, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles/AppStyles'; // Import styles from your styles folder
 
 export default function App() {
-  const projects = [
-    {
-      id: 1,
-      title: 'Project One',
-      description: 'A cool mobile app',
-      tech: 'React Native, Expo'
-    },
-    {
-      id: 2,
-      title: 'Project Two',
-      description: 'Another awesome project',
-      tech: 'React Native, Firebase'
-    }
-  ];
-
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.name}>Your Name</Text>
-        <Text style={styles.title}>Mobile Developer</Text>
+      <View style={styles.hero}>
+        <Image 
+          source={{ uri: 'https://imgur.com/xOY5XW8' }}
+          style={styles.heroImage}
+        />
+        <View style={styles.heroOverlay}>
+          <Text style={styles.badge}>My Portfolio</Text>
+          <View style={styles.heroInfo}>
+            <Text style={styles.name}>Giovanni Atienza</Text>
+            <Text style={styles.info}>Age: 25</Text>
+            <Text style={styles.info}>Castilla, Bicol Region, PH</Text>
+          </View>
+        </View>
       </View>
 
+      {/* ========== ABOUT SECTION ========== */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>About Me</Text>
+        <Text style={styles.title}>About Me</Text>
         <Text style={styles.text}>
-          Passionate mobile developer with experience in React Native and Expo...
+          I am a student a Computer Science Student in De La Salle Lipa, ready to learn new things and open for challenges.
         </Text>
       </View>
 
+      {/* ========== SKILLS SECTION ========== */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Projects</Text>
-        {projects.map(project => (
-          <View key={project.id} style={styles.projectCard}>
-            <Text style={styles.projectTitle}>{project.title}</Text>
-            <Text style={styles.projectDesc}>{project.description}</Text>
-            <Text style={styles.projectTech}>{project.tech}</Text>
+        <Text style={styles.title}>Skills</Text>
+        
+        {['React Native', 'Expo', 'JavaScript', 'UI/UX Design', 'Firebase'].map((skill, i) => (
+          <View key={i} style={styles.skill}>
+            <Text style={styles.skillText}>{skill}</Text>
           </View>
         ))}
       </View>
 
+      {/* ========== PROJECTS SECTION ========== */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Contact</Text>
-        <TouchableOpacity onPress={() => Linking.openURL('mailto:your@email.com')}>
-          <Text style={styles.link}>your@email.com</Text>
+        <Text style={styles.title}>Projects</Text>
+        
+        <View style={styles.project}>
+          <Image 
+            source={{ uri: '' }}
+            style={styles.projectImage}
+          />
+          <Text style={styles.projectTitle}>Cine-Ease</Text>
+          <Text style={styles.projectText}>Cinema Booking System</Text>
+        </View>
+
+        <View style={styles.project}>
+          <Image 
+            source={{ uri: '' }}
+            style={styles.projectImage}
+          />
+          <Text style={styles.projectTitle}>Wel-bi</Text>
+          <Text style={styles.projectText}>Tracks Mood and Well-being</Text>
+        </View>
+      </View>
+
+      {/* ========== CONTACT SECTION ========== */}
+      <View style={styles.section}>
+        <Text style={styles.title}>Contact</Text>
+        
+          <Text style={styles.contactIcon}>✉️</Text>
+          <Text style={styles.contactText}>gncrlatienza@gmail.com</Text>
+
+        <TouchableOpacity 
+          style={styles.contact}
+          onPress={() => Linking.openURL('https://github.com/gncrlatienza-eng')}
+        >
+          <Text style={styles.contactIcon}>💻</Text>
+          <Text style={styles.contactText}>GitHub Profile</Text>
         </TouchableOpacity>
       </View>
+      
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f5f5f5',
-  },
-  header: {
-    backgroundColor: '#2196F3',
-    padding: 40,
-    paddingTop: 60,
-    alignItems: 'center',
-  },
-  name: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: 'white',
-    marginBottom: 8,
-  },
-  title: {
-    fontSize: 18,
-    color: 'white',
-    opacity: 0.9,
-  },
-  section: {
-    padding: 20,
-    backgroundColor: 'white',
-    marginVertical: 8,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-    color: '#333',
-  },
-  text: {
-    fontSize: 16,
-    color: '#666',
-    lineHeight: 24,
-  },
-  projectCard: {
-    backgroundColor: '#f9f9f9',
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#2196F3',
-  },
-  projectTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 8,
-    color: '#333',
-  },
-  projectDesc: {
-    fontSize: 14,
-    color: '#666',
-    marginBottom: 8,
-  },
-  projectTech: {
-    fontSize: 12,
-    color: '#2196F3',
-    fontStyle: 'italic',
-  },
-  link: {
-    fontSize: 16,
-    color: '#2196F3',
-    textDecorationLine: 'underline',
-  },
-});
