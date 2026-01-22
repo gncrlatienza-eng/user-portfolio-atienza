@@ -94,19 +94,6 @@ export default function App() {
               </Text>
             </View>
           </View>
-
-          <View style={styles.project}>
-            <Image 
-              source={{ uri: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80' }}
-              style={styles.projectImage}
-            />
-            <View style={styles.projectContent}>
-              <Text style={styles.projectTitle}>Portfolio App</Text>
-              <Text style={styles.projectText}>
-                A beautiful iOS-themed portfolio showcasing my work and skills with modern design.
-              </Text>
-            </View>
-          </View>
         </ScrollView>
       </View>
 

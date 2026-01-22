@@ -64,39 +64,6 @@ export const styles = StyleSheet.create({
     opacity: 0.95,
   },
 
-  // ===== STATS SECTION =====
-  statsContainer: {
-    flexDirection: 'row',
-    margin: 16,
-    marginTop: -40,
-    gap: 12,
-  },
-  statCard: {
-    flex: 1,
-    backgroundColor: 'rgba(255,255,255,0.9)',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.8)',
-    padding: 20,
-    borderRadius: 16,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 12,
-  },
-  statNumber: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#007AFF',
-    marginBottom: 4,
-  },
-  statLabel: {
-    fontSize: 13,
-    color: '#6a6a6a',
-    fontWeight: '600',
-    textAlign: 'center',
-  },
-
   // ===== SECTION STYLES =====
   section: {
     marginHorizontal: 16,
@@ -113,6 +80,7 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 12,
     overflow: 'hidden',
+    
   },
   sectionHeader: {
     flexDirection: 'row',
