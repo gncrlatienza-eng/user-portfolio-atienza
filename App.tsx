@@ -42,6 +42,8 @@ export default function App() {
           <Text style={styles.text}>
             I am a Computer Science Student at De La Salle Lipa, passionate about mobile development.
             Ready to learn new things and open for challenges that push my boundaries.
+
+            Education
           </Text>
         </View>
       </View>
@@ -75,7 +77,7 @@ export default function App() {
         >
           <View style={styles.project}>
             <Image
-              source={{ uri: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80' }}
+              source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769103536/Screenshot_2025-10-23_085056_zlicse.png' }}
               style={styles.projectImage}
             />
             <View style={styles.projectContent}>
@@ -88,7 +90,7 @@ export default function App() {
 
           <View style={styles.project}>
             <Image
-              source={{ uri: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80' }}
+              source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769105318/Screenshot_2026-01-23_020813_tg7lu8.png' }}
               style={styles.projectImage}
             />
             <View style={styles.projectContent}>
