@@ -29,7 +29,7 @@ export default function App() {
         <View style={styles.heroOverlay}>
           <View style={styles.badgeRow}>
             <Text style={styles.badge}>My Portfolio</Text>
-            <TouchableOpacity 
+            <TouchableOpacity
               style={[styles.toggleSwitch, isDark && styles.toggleSwitchDark]}
               onPress={() => setIsDark(!isDark)}
             >
@@ -95,6 +95,58 @@ export default function App() {
               <Text style={[styles.projectTitle, !isDark && styles.projectTitleLight]}>Cine-Ease</Text>
               <Text style={[styles.projectText, !isDark && styles.projectTextLight]}>
                 A modern cinema booking system with real-time seat selection and payment integration.
+              </Text>
+            </View>
+          </View>
+
+          <View style={[styles.project, !isDark && styles.projectLight]}>
+            <Image
+              source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769153272/Screenshot_2026-01-23_152741_ae0bxz.png' }}
+              style={styles.projectImage}
+            />
+            <View style={styles.projectContent}>
+              <Text style={[styles.projectTitle, !isDark && styles.projectTitleLight]}>The Sentinel</Text>
+              <Text style={[styles.projectText, !isDark && styles.projectTextLight]}>
+                UI/UX: A system that helps farmer to search and identify for particular pest and disease affecting their crops.
+              </Text>
+            </View>
+          </View>
+
+          <View style={[styles.project, !isDark && styles.projectLight]}>
+            <Image
+              source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769153619/LetsBudget_shz1by.png' }}
+              style={styles.projectImage}
+            />
+            <View style={styles.projectContent}>
+              <Text style={[styles.projectTitle, !isDark && styles.projectTitleLight]}>Let's Budget</Text>
+              <Text style={[styles.projectText, !isDark && styles.projectTextLight]}>
+                UI/UX: An intuitive budgeting app to help users manage their finances effectively.
+              </Text>
+            </View>
+          </View>
+
+          <View style={[styles.project, !isDark && styles.projectLight]}>
+            <Image
+              source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769153911/Screenshot_2026-01-23_153740_coxe8f.png' }}
+              style={styles.projectImage}
+            />
+            <View style={styles.projectContent}>
+              <Text style={[styles.projectTitle, !isDark && styles.projectTitleLight]}>Smart Vault</Text>
+              <Text style={[styles.projectText, !isDark && styles.projectTextLight]}>
+                UI/UX: A secure IOT-based vault system with remote access and monitoring features.
+              </Text>
+            </View>
+          </View>
+
+          <View style={[styles.project, !isDark && styles.projectLight]}>
+            <Image
+              source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769154152/Screenshot_2026-01-23_154213_hdiiqs.png' }}
+              style={styles.projectImage}
+            />
+            <View style={styles.projectContent}>
+              <Text style={[styles.projectTitle, !isDark && styles.projectTitleLight]}>Go Fast</Text>
+              <Text style={[styles.projectText, !isDark && styles.projectTextLight]}>
+                UI/UX: A navigation based system designed to identify the fastest route to a destination.
               </Text>
             </View>
           </View>
