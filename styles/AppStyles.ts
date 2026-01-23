@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#000000',
   },
 
-  // ===== HERO STYLES =====
+  //  HERO STYLES 
   hero: {
     height: 900,
     position: 'relative',
@@ -67,9 +67,10 @@ export const styles = StyleSheet.create({
     color: 'white',
     marginBottom: 6,
     opacity: 0.95,
+    fontStyle: 'italic'
   },
 
-  // ===== TOGGLE SWITCH STYLES =====
+  // TOGGLE SWITCH STYLES 
   toggleSwitch: {
     width: 50,
     height: 28,
@@ -105,7 +106,7 @@ export const styles = StyleSheet.create({
     fontSize: 12,
   },
 
-  // ===== SECTION STYLES =====
+  // SECTION STYLES 
   section: {
     marginHorizontal: 16,
     marginBottom: 24,
@@ -147,7 +148,7 @@ export const styles = StyleSheet.create({
     fontWeight: '400',
   },
 
-  // ===== SKILL STYLES (2-Column Grid) =====
+  // SKILL STYLES 
   skillsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -175,7 +176,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  // ===== PROJECT STYLES (Horizontal Scroll) =====
+  // PROJECT STYLES 
   projectsScroll: {
     paddingLeft: 16,
   },
@@ -212,7 +213,7 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
   },
 
-  // ===== CONTACT STYLES =====
+  // CONTACT STYLES 
   contactGrid: {
     gap: 12,
   },
@@ -245,7 +246,7 @@ export const styles = StyleSheet.create({
     height: 40,
   },
 
-  // ===== LIGHT MODE STYLES =====
+  // LIGHT MODE STYLES 
   containerLight: {
     backgroundColor: '#ffffff',
   },

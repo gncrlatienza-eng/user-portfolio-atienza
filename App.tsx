@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <ScrollView style={[styles.container, !isDark && styles.containerLight]}>
-      {/* ========== HERO SECTION ========== */}
+      {/* HERO SECTION */}
       <View style={styles.hero}>
         <Image
           source={{ uri: 'https://res.cloudinary.com/dt73x7u5k/image/upload/v1769067439/profile-1_av4yxf.jpg' }}
@@ -41,25 +41,30 @@ export default function App() {
           <View style={styles.heroInfo}>
             <Text style={styles.name}>Gian Carlo Atienza</Text>
             <Text style={styles.info}>Age, 21</Text>
-            <Text style={styles.info}>Bio: The Moment You Hesitate, It's All Over</Text>
+            <Text style={styles.info}>Bio: Trust Your Gut Feeling</Text>
           </View>
         </View>
       </View>
 
-      {/* ========== ABOUT SECTION ========== */}
+      {/* ABOUT SECTION */}
       <View style={styles.section}>
         <View style={[styles.sectionCard, !isDark && styles.sectionCardLight]}>
           <View style={styles.sectionHeader}>
             <Text style={[styles.title, !isDark && styles.titleLight]}>About Me </Text>
           </View>
           <Text style={[styles.text, !isDark && styles.textLight]}>
-            I am a Computer Science Student at De La Salle Lipa, passionate about mobile development.
-            Ready to learn new things and open for challenges that push my boundaries.
+            I am a 3rd-year Computer Science Student at De La Salle Lipa with a
+            passion for mobile development. Currently focusing on React Native,
+            I aspire to bridge the gap between clean code and intuitive user
+            experiences. I am an aspiring UI/UX Designer eager to tackle
+            challenges that allow me to merge technical logic with creative
+            design. Ready to learn new things and open for challenges that push
+            my boundaries.
           </Text>
         </View>
       </View>
 
-      {/* ========== SKILLS SECTION (2-Column Grid, No Icons) ========== */}
+      {/* SKILLS SECTION */}
       <View style={styles.section}>
         <View style={[styles.sectionCard, !isDark && styles.sectionCardLight]}>
           <View style={styles.sectionHeader}>
@@ -75,7 +80,7 @@ export default function App() {
         </View>
       </View>
 
-      {/* ========== PROJECTS SECTION (Horizontal Scroll) ========== */}
+      {/* PROJECTS SECTION */}
       <View style={styles.section}>
         <View style={styles.sectionHeader}>
           <Text style={[styles.title, !isDark && styles.titleLight]}>Projects</Text>
@@ -166,7 +171,7 @@ export default function App() {
         </ScrollView>
       </View>
 
-      {/* ========== CONTACT SECTION ========== */}
+      {/* CONTACT SECTION */}
       <View style={styles.section}>
         <View style={[styles.sectionCard, !isDark && styles.sectionCardLight]}>
           <View style={styles.sectionHeader}>
